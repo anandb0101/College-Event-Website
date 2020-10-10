@@ -1,0 +1,26 @@
+{
+  "name": "college-eventa",
+  "version": "1.0.0",
+  "description": "web project for webster@Avishkar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandb0101/College-Event-Website.git"
+  },
+  "author": "DevDas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anandb0101/College-Event-Website/issues"
+  },
+  "homepage": "https://github.com/anandb0101/College-Event-Website#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
+  }
+}
