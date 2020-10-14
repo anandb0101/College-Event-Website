@@ -1,7 +1,28 @@
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
+const mysql = require('mysql');
+
+var pool = mysql.createPool({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "test"
+});
+
+pool.query('select * from register', function(err, result, fields){
+    if(err){
+        console.log('error');
+    }else{
+        console.log('connected db');
+        console.log(result);
+    }
+
+});
+
+
 const app = express();
+
 
 
 app.use(express.json());
