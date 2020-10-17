@@ -1,27 +1,21 @@
 const express = require('express');
 const routes = require('./routes');
 const path = require('path');
-const mysql = require('mysql');
-
-var pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "test"
-});
-
-pool.query('select * from register', function(err, result, fields){
-    if(err){
-        console.log('error');
-    }else{
-        console.log('connected db');
-        console.log(result);
-    }
-
-});
+var bodyParser = require('body-parser');
 
 
 const app = express();
+
+
+
+
+var loginController=require('./controllers/loginController');
+var registerController=require('./controllers/registerController');
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
+/* route to handle login and registration */
+app.post('/signup',registerController.register);
+app.post('/login',loginController.authenticate);
 
 
 
