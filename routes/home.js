@@ -4,7 +4,7 @@ var router = express.Router();
 
 
 router.get("/", function(req, res) {
-    res.render("home/");
+    res.render("home/getStarted");
 });
 
 router.get("/home", function(req,res){
